@@ -6,20 +6,27 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "cypress": "^8.7.0",
+    "start-server-and-test": "^1.14.0"
   },
   "dependencies": {
     "clipboard": "^2.0.4",
     "github-fork-ribbon-css": "^0.2.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "cypress": "^8.7.0",
+    "start-server-and-test": "^1.14.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+           "start-server": "npm start",
+         "cy:run": "cypress run",
+         "cy:ci": "start-server-and-test start-server http://localhost:3000 cy:run"
   },
   "browserslist": {
     "production": [
